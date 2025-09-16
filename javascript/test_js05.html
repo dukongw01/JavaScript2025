@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제5</title>
+</head>
+<body>
+
+    <!-- 인풋 입력 영역 -->
+    <input id="text1" type="number" placeholder="첫번째">
+    <input id="text2" type="number" placeholder="두번째">
+    <!-- 버튼 -->
+    <button type="button" onclick="calc()">계산</button>
+    <!-- 출력 -->
+    <p id="endnum"></p>
+    
+
+    <!-- 스크립트 영역 -->
+    <script>
+        //onclick과 function의 함수 이름이 같아야한다.
+        function calc(){
+            let text1=Number(document.getElementById('text1').value);
+            let text2=Number(document.getElementById('text2').value);
+            let res=document.getElementById('endnum');
+
+            //연산을 구조적으로 보기 좋게 만들기를 원한다면 변수로 모두 정의한다.
+            let add=text1+text2;
+            let dif=text1-text2;
+            let mul=text1*text2;
+            let did=text1/text2;
+            console.log(`${add}`);
+            res.innerHTML=`합: ${add}, 차:${dif}, 곱:${mul}, 나누기:${did}`;
+        }
+
+        // && : and의 의미. 조건을 모두 만족할 때 true, false
+        // || : or의 의미. 조건 중 하나라도 만족할 때 true, false
+        // ! : not(true)의 의미. 조건의 부정으로 false이 출력됨
+        // 엑셀이 40점 이상이면서, 액세스가 40점 이상, 평균이 60점 이상이면
+        // 컴활 '합격', 아니면 '불합격'이다.
+        let nn=0;
+        let nn2=60;
+        let avg=(nn+nn2)/2;
+        nn>=40 && nn2>=40 && avg>=60? '합격':'불합격';
+        console.log(`avg:${avg},${nn>=40 && nn2>=40 && avg>=60}`);
+    </script>
+
+</body>
+</html>

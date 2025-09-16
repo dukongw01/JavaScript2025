@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제6</title>
+</head>
+<body>
+
+    <input id="nb1" type="number" placeholder="첫번째">
+    <input id="nb2" type="number" placeholder="두번째">
+    <button onclick="compareNum()">비교</button>
+    <p id="output"></p>
+    
+    <script>
+
+        function compareNum(){
+
+            let nb1=Number(document.getElementById('nb1').value);
+            let nb2=Number(document.getElementById('nb2').value);
+            let res = document.getElementById('output');
+            console.log(nb1,nb2);
+        
+            //NaN : Not a Number = 숫자가 아니다.
+            // > 기호 : &gt
+            res.innerHTML=`n1>n2? ${nb1>nb2} n1==n2? ${nb1==nb2}`;
+            console.log(res.innerHTML);
+
+        }
+    </script>
+
+</body>
+</html>

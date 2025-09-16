@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제7</title>
+</head>
+<body>
+
+    <input id="sg" type="number" placeholder="점수 입력">
+    <button onclick="check_g()">등급 확인</button>
+    <p id="che-bar"></p>
+    <script>
+
+        function check_g(){
+            let sg=Number(document.getElementById('sg').value);
+
+            let res=document.getElementById('che-bar');
+            
+            let cac1=sg>=90? 'A':sg>=80?'B':sg>=70?'C':sg>=60?'D':'F';
+
+            res.innerHTML=cac1;
+            console.log(res);
+
+
+        }
+    
+        </script>
+
+</body>
+</html>

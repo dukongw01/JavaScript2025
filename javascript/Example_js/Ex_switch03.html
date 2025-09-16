@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스위치 문제</title>
+</head>
+<body>
+    <h1>직원 근무시간 급여 계산</h1>
+    <P>근무 시간 입력</P>
+    <input type="text" id="ppss"> <!-- 근무 시간 입력-->
+    <button onclick="woti()">급여 계산</button>
+    <br/>
+    급여:<p id="csh"></p> <!--급여-->
+    메세지:<p id="wme"></p> <!-- 근무 메세지-->
+    상태:<p id="yrn"></p> <!--급여 유무-->
+    
+    <script> //스크립트
+
+            // 펀션 밖에 값을 두는 걸 전역 변수라고 한다. 전지역에서 사용한다.
+            // const bacePay=10000;
+            // let realPay=0;
+            // let overPay=0;
+            // let baceTime=0;
+            // 지역 변수: 펀션이 여러개면 그때마다 넣어줘야한다. 그 지역 펀션에서 매번 값을 입력해야한다.
+        
+            function woti(){
+                //기본 급여 : 만원
+                // 데이터 종류 => a=6, a="ai" (문자변수)
+                const bacePay=10000;
+                let realPay=0;
+                let overPay=0;
+                let baceTime=0;
+                //변수 지정
+                let ppss=Number(document.getElementById('ppss').value);
+                //페이
+                let csh=document.getElementById('csh');
+                let wme=document.getElementById('wme');
+                let yrn=document.getElementById('yrn');
+
+                //스위치
+
+                let payTotal = 0; // 초기화
+                
+                if(ppss>8){
+                    realPay=ppss*bacePay; //기본급
+                    //기본 시간 8시간 외에는 초과근무시간
+                    overTime=ppss-8; //초과시간
+                    overPay=overTime*bacePay*1.5;
+                    payTotal = realPay + overPay;
+                    pay.innerHTML=payTotal;
+                }else{
+                    realPay=ppss*bacePay;
+                    pay.innerHTML=payTotal;
+                }
+                // 근무 메세지
+                //switch(true)
+                let wmee=""; //초기화 문자를 넣을 변수
+                switch(true){
+                    case (ppss == 0):
+                        wme = "정상 근무"
+                        break;
+                    case (ppss >= 1 && ppss <=8):
+                        wme = "근무 안함"
+                        break;
+                    case (ppss > 8):
+                        wme = "초과 근무"
+                        break;
+                }
+
+                wme.innerHTML = wmee;
+                //근무 상태
+                //3항 연산자 이용
+                status.innerHTML = ppss==0? '무급:급여 있음'
+            }
+    </script>
+
+</body>
+</html>

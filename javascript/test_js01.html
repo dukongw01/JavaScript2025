@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산연습</title>
+</head>
+<body>
+    <h1>자바스크립트 실습문제</h1>
+    <!-- onclick : 버튼을 클릭해라
+         porble() : 함수 이름
+         버튼을 클릭하면 poble() 함수를 실행하라는 뜻 -->
+    <button type="button" onclick="proble()">
+        문제1 : 변수와 상수 출력
+    </button>
+    <!-- 결과 화면 출력 -->
+     <p id="p1"></p>
+     <!-- 자바스크립트 영역 -->
+      <!-- <script> ~ </script> -->
+    <script>
+        // 1. poble() 함수를 생성한다.
+        // 2. 함수를 생성 시 반드시 function 명령어 입력
+        // 3. 함수구성 : function 함수이름(){}
+        function proble(){
+            let pri=document.getElementById('p1'); //p1이라는 이름을 가진 태그를 pri라는 변수에 저장시킴
+            let name='홍길동'; //name라는 변수에 홍길동이라는 값이 저장됐다.
+            name="개나리";
+            const age=20;
+            console.log(name+age); //콘솔창에 출력된다.
+            // 브라우저에 출력 되길 원하면?
+            pri.innerHTML=name + "의 나이는 " + age + "세 입니다.";
+            // 빽틱 `` 의 사이의 출력할 변수와 문자는 + 없이 사용가능
+            // `나이 : ${변수이름}
+            pri.innerHTML=`이름은 ${name} 입니다. 나이는 ${age}세 입니다.`;
+            // innerHTML란 pri 태그, 즉 <p> ~ </p> 사이에 값이 입력되게 한다.
+        }
+    </script>
+</body>
+</html>

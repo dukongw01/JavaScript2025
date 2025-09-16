@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF 실습문제</title>
+</head>
+<body>
+
+    <!-- 버튼 영역 -->
+    <h3>국, 영, 수 평균 70이상 "합격" </h3>
+    <input id="kk" type="text" placeholder="국어 입력">
+    <input id="ee" type="text" placeholder="영어 입력">
+    <input id="mm" type="text" placeholder="수학 입력">
+    <button onclick="ch()">확인</button>
+    <p id="p"></p>
+    
+    <!-- 스크립트 영역 -->
+    <script>
+
+        function ch(){
+            let kk = Number(document.getElementById('kk').value);
+            let ee = Number(document.getElementById('ee').value);
+            let mm = Number(document.getElementById('mm').value);
+            let pp=document.getElementById('p');
+
+            console.log('합격');
+            // 평균을 구해서 avg 변수에 저장
+            let avg=(kk+ee+mm)/3;
+
+            if(avg>=70){
+                console.log('출력됨')
+                pp.innerHTML='합격';
+            }else{
+                console.log('출력됨')
+                pp.innerHTML='불합격';
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

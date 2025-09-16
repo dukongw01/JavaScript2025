@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제3</title>
+</head>
+<body>
+    <button type="button" onclick="problem3()">
+        문제3. 문자열 연결
+    </button>
+    <p id="p3"></p>
+    <script>
+        function problem3(){
+            let pri=document.getElementById('p3');
+            const pop1='Hello'; //문자는 '' 나 "" 를 써야한다.
+            const pop2='Wold';
+            console.log(`pop1${pop1}, pop2${pop2}`);
+            pri.innerHTML=`${pop1} ${pop2}`;
+        }
+        // %의 의미는 나머지를 구하는 기호이다.
+        let a=25;
+        let b=2;
+        console.log(`a를 b로 나눈 나머지 : ${a % b}`);
+        console.log(`a를 b로 나눈 몫 : ${a / b}`);
+        // 3항 연산자
+        // 조건 ? true일 때 값 : false일 때 값
+        // 조건 - 비교대상 비교연상자 비교값
+        // 국어가 90이상이면 '수', 아니면 '재수강'
+        // 조건 : 국어 >= 90
+        // 국어 >= 90 ? '수' : '재수강'
+        // 결과 값이 true = 1, false = 0
+        let eng=90;
+        eng >= 90 ? '수':'재수강';
+        console.log(`${eng>=90?'수':'재수강'}`);
+
+        // 다중 3항 연산자
+        // if eng>=90 then
+        // result = '수'
+        // elseif eng = 80 then
+        // else
+        // result="재수강"
+        // end if
+        //3항 연산자 사용이유 => if대응, 식이 간편
+        // eng가 90 이상이면 '수', 아니면 eng가 80이상이면 '우' 그 외에는 '재수강'
+        let result=eng>=90?'수':eng>=90?'우':'재수강';
+        console.log(`${result}`);
+    </script> 
+</body>
+</html>

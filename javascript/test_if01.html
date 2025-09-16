@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF 조건문</title>
+</head>
+<body>
+    <!-- 짝수/홀수 출력 -> 콘솔 -->
+    <h1>java script if</h1>
+    
+    <script> // 스크립트
+        let num=3;
+        if(num % 2 ==0){
+            // 조건이 만족하는 영역 (true)
+            console.log("num"+num);
+        } else{
+            // 조건을 만적하지 않는 영역. (false)
+            console.log(`num:${num}`);
+        }
+        // 나이가 20 이상이면 성인입니다. 아니면 미성년자 입니다.
+        // if ~ else
+        let age=20;
+        if (age >= 20){
+            console.log('성인입니다.');
+        }else{
+            console.log('미성년자입니다');
+        }
+        //또는
+        //let age=20;
+        //if (age >= 20) console.log('성인 입니다.')
+        //else console.log('미성년자 입니다.')
+        // 이처럼 줄일 수 있음
+
+        //재할당
+        age=15;
+        if (age >= 20) console.log('성인 입니다.')
+        else console.log('미성년자 입니다.')
+
+        //다중 if => 조건이 2개 이상인 경우
+        // score가 90이상 a, 80이상 b, 70이상 c, 60이상 d
+        // 그 외의 모든 값은 f
+        let score = 90;
+        if(score>=90){
+            console.log('A');
+        }else if(score>=80){
+            consolel.log('b');
+        }else if(score>=70){
+            consolel.log('c');
+        }else if(score>=60){
+            consolel.log('d');
+        }else{ 
+            // else는 반드시 붙여서 써야한다.
+            //위 조건을 만족하지 않는 전부
+            consolel.log('f');
+        }
+
+        //if(score >=90)console.log('a');
+        //if(score >=80)console.log('b');
+        //if(score >=70)console.log('c');
+        //if(score >=60)console.log('d');
+
+        // 숫자 3개 중 최대값 찾기
+        // a=15, b=5, c=-1
+
+        //나의 연산
+        //let abc=15;
+        //if(abc<=10){console.log('최대값이 아닙니다.');}else{console.log('최대값 입니다.')}
+
+        //선생님의 답
+        let a=15;
+        let b=5;
+        let c=-1;
+        // 임시 변수 => a값을 상수로 사용
+        let max=a;
+        if(b>max){ max=b;
+            console.log(`${max}`)
+        }if(c>max){ max=c;
+            console.log(`${max}`)
+        } console.log(`최대값 : ${max}`);
+        //기본적으로 모든 코드는 시퀀스이다. 시퀀스란? 순서대로 읽어들이는 방식이다.
+        //질문 - 답 -> 질문 - 답
+
+        //id가 'admin' 이면서 pw가 'admin1234' 면 로그인에 성공, 아니면 실패
+        //이면서 = and = &&
+        const id='admin';
+        const pw='admin1234'; //관리자 아이디와 비밀번호는 딱 하나만 있어야해서 const로 짜야한다.
+        if(id=='admin' && pw=='admin1234'){
+            console.log('로그인 성공');
+        }else{
+            console.log('로그인 실패');
+        }
+
+        // 숫자 비교 x=5, y=7 => x가 y보다 크면 x . y가 x보다 크면 y . x와 y가 같으면 같다
+        //나의 답안
+        let x=5;
+        let y=7;
+        if(x>y)console.log('X');
+        if(x<y)console.log('Y');
+        if(x==y)console.log('같다.');
+        //선생님의 답안
+        // let x=5, y=7; <- 한줄로 처리해도 된다.
+        // if(x>y)console.log('X')
+        // if(x<y)console.log('Y')
+        // if(x==y)console.log('같다.');
+
+        //양수와 음수, 0 을 출력하기
+        // k=-1;
+        let k=-1;
+        if(k==0)console.log(0);
+        if(k>0)console.log('양수');
+        if(k<0)console.log('음수');
+
+    </script>
+</body>
+</html>

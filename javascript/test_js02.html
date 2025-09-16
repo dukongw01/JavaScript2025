@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 문제2</title>
+</head>
+<body>
+    <button type="button" onclick="proble()">
+        문제2. 두 수 더하기
+    </button>
+    <h3 id="h3"></h3>
+    
+    <script>
+        function proble(){
+            let pri=document.getElementById('h3');
+            let name='합계:';
+            const str1=10;
+            const str2=5;
+            // consol.log는 값에 error가 있는지 파악하기 위해서 디버깅용으로 찍어둔다.
+            console.log(`str1:${str1}+str2:${str2}`);
+            // pri.innerHTML=name+(str1+str2); 또는
+            pri.innerHTML=`${name} ${str1+str2}`;
+        }
+    </script>
+</body>
+</html>

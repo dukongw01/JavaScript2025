@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF 실습문제</title>
+</head>
+<body>
+
+    <!-- 버튼 영역 -->
+    <h3>문제2 : 영어와 수학 점수가 50이상이면 "통과"</h3>
+    <input id="te1" type="text" placeholder="국어 점수">
+    <input id="te2" type="text" placeholder="수학 점수">
+    <button onclick="an1()">확인</button>
+    <p id="p"></p>
+    
+    <!-- 스크립트 영역 -->
+    <script>
+
+        function an1(){
+            let te1=document.getElementById('te1');
+            let te2=document.getElementById('te2');
+            let p=document.getElementById('p');
+            // p.innerHTML=('p');
+
+            let tet1=50, tet2=50;
+            if(tet1>=50)console.log('통과');
+            if(tet2>=50)console.log('통과');
+            else{console.log('불합격')};
+
+        }
+
+    </script>
+
+</body>
+</html>
