@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> For 반복문 </title>
+</head>
+<body>
+    <script>
+        //1부터 10까지 콘솔에 출력
+        //for(let 초기변수; 조건식; 증감값){}
+        //for문을 읽는 순서 : 초기변수 -> 조건식 > 증감값
+        // 예시 : i = 1 -> 1<=10 -> 출력
+        //루프1 : i = 1 -> 1<=10 -> 출력 -> 증감식 i = i + 1 -> i = 2
+        //루프2 : i = 2 -> 1<=10 -> 출력 -> 증감식 i = i + 1 -> i = 3
+        //루프3 : i = 3 -> 1<=10 -> 출력 -> 증감식 i = i + 1 -> i = 4
+        //반복
+        //루프11 : i = 11 -> 1<=10 -> 조건이 만족되지 않는다. false. 루프 멈춤
+        let i =0;
+        for(i=1;i<=10;i++){
+            console.log(i+' '); //i는 숫자이고 ''는 문자이다.
+        }
+        console.log(`루프를 빠져나온 값 ${i}`);
+        
+         //for와 if를 이용해서 1~20 중 홀수 출력
+        for(let j=1;j<=20;j++){
+            if(j % 2 !=0){
+                console.log(j);
+            }
+        }
+
+        // 1~20 중에 짝수의 합, 홀수의 합을 각각 구하여 출력
+        let eventotal=0; //짝
+        let oddtotal=0; //홀
+
+        for(let j=1;j<=20;j++){
+            //홀짝 구분 if
+            if(j % 2 ==0){ //짝
+                eventotal=eventotal +j;
+            }else{ //홀
+                oddtotal=oddtotal +j;
+            }
+        }
+        console.log(`짝 합${eventotal}`);
+        console.log(`홀 합${oddtotal}`);
+
+        // 50~100 중에 홀수가 몇개인지 구하기
+        let oddcount=0;
+        for(let j=50;j<=100;j++){
+            if(j % 2 !=0){
+                oddcount++;
+            }
+        }
+        console.log(oddcount);
+
+        // 구구단 5단 출력. 5 X 1 = 5 출력하기
+        for(let j=1; j<=9; j++){
+            console.log(`5 X ${j} = ${j} = ${5*j}`);
+        }
+
+
+    </script>
+</body>
+</html>

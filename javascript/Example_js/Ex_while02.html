@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while 연습 문제</title>
+</head>
+<body>
+
+    <h1>문제:입력한 만큼 헬로 출력</h1>
+    <input type="text" id="cnt">
+    <button onclick="cntclick()">클릭</button>
+    <p id="oupt"></p>
+    
+    <script>
+        function cntclick(){
+            let cnt=Number(document.getElementById('cnt').value);
+            let oupt=document.getElementById('oupt');
+
+            //입력할 숫자 담을 변수 초기화
+            let n=1;
+            let result=''; //결과값
+            //문자데이터 출력 위한 ''로 초기화
+
+            //반복할 실행문 while
+            //cnt가 인풋에 입력받는 값을 담은 변수
+
+            while(n<=cnt){
+                result=result+"hello<br/>";
+                //n을 누적하는 공식
+                n++;
+
+            }
+            oupt.innerHTML=result;
+        }
+    
+     </script>
+</body>
+</html>
