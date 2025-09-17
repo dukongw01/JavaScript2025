@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while에서 for로 바꾸기</title>
+</head>
+    <p id="oupt"></p>
+<body>
+    <script>
+        let result=' ';
+        let n=6;
+        for(let i=1; i<=n; i++){
+
+            let blk = '';
+
+            for(let j=1; j<=n-i; j++){
+                blk +='#';
+            }
+
+            for(let k=1; k<=i*3; k++){
+                result +='&nbsp';
+            }
+                result += blk + '<br/>';
+
+        }
+        oupt.innerHTML=result;
+
+    </script>
+</body>
+</html>

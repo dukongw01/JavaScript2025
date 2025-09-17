@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while에서 for로 바꾸기</title>
+</head>
+    <p id="oupt"></p>
+<body>
+    <script>
+        let result='';
+            // 구구단 출력
+            // i=2 -> j는 1부터 9까지 result 출력
+            // 다시 바깥 for문으로 증감 이동 i=3
+            // 조건 i<=9 만족하면 다시 안쪽 for 루프 1~9
+            for(let i=2; i<=9; i++){ //2~9단 출력
+                result=result + i +'단<br/>';
+                for(let j=1; j<=9; j++){ //1부터 9까지 곱함
+                    // 2x1=2 형태 출력
+                    result = result + i + 'x' + j + '=' + i*j + '<br/>';
+                }
+                //단과 단 사이 줄바꿈
+                result = result + '<br/>';
+            }
+            oupt.innerHTML=result;
+
+    </script>
+</body>
+</html>
