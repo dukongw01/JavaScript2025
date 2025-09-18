@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array심화 학습</title>
+</head>
+<body>
+
+    <label>점수 : 배열 입력(예:90, 70, 50, 60)</label>
+    <input type="text" id="scoreinput">
+    <button onclick="scoreclick()">결과 확인</button>
+    <p id="output"></p>
+    
+    <script>
+        // 주어진 기본 배열
+        let score=[];
+        function scoreclick(){
+            // document로 변수화 하기
+            let scoreinput=document.getElementById('scoreinput').value;
+            let output=document.getElementById('output');
+            //input 입력받는 값에 Number() 사용하면 입력되는 값이
+            //90, 60, 70 등으로 쉼표가 들어갈 시 문자로 인식된다.
+            //그래서 NaN오류가 출력된다.
+            // let scoreinput2=Number(document.getElementById('scoreinput').value);
+            // 콤마 ',' 삭제 -> split(',')
+            // 배열 삭제 후에 문자화 된다. "90", "80"
+            // 배열 이름.map() : 기존의 배열을 숫자화 하여 다시 배열을 만든다.
+            // scores=[90,80,70,];
+            //자바스크립트는 문자가 아니라 문자열(string) 데이터 형식이다.
+            // String 문자열 개체
+            score=scoreinput.split(',').map(Number);
+            //scores. 새로운 console=[.split] [입력받은 값을] 배열 탄생
+            console.log(score);
+            let result=''; //결과값을 담은 함수
+        
+            //반복문
+            for(let i=0; i<=score.length-1; i++){
+                // 90이상 a, 80이상 b 70이상 c 그외 if
+                if(score[i]>=90){
+                    result += score[i]+ '점: A,' ;
+                }else if(score[i]>=80){
+                    result += score[i]+ '점: B,' ;
+                }else if(score[i]>=70){
+                    result += score[i]+ '점: C,' ;
+                };
+            }
+        }
+        output.innerHTML=result;
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 array</title>
+</head>
+<body>
+    <label for="text">가격</label>
+    <input type="text" id="chch">
+    <button onclick="clcl()">확인</button>
+    <p id="opop"></p>
+
+    <script>
+
+        let cart=[];
+        function clcl(){
+            let chch=document.getElementById('chch').value;
+            let opop=document.getElementById('opop');
+            cart=chch.split(',').map(Number);
+            let result='';
+            for(let i=0; i<=cart.length-1; i++){
+                switch(true){
+                    case cart[i] >= 10000:
+                        result += cart[i] + ':고가, ';
+                        break;
+                    case cart[i] >= 5000:
+                        result += cart[i] + ':중저가, ';
+                        break;
+                    default:
+                        result += cart[i] + ':저가, ';
+                        break;
+                }
+            }
+            opop.innerHTML=result;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 array10</title>
+</head>
+<body>
+    <label for="text">3번 출석 배열 입력(출, 결, 지) 예:출, 결, 출, 지, 출</label>
+    <input type="text" id="chch">
+    <button onclick="clcl()">확인</button>
+    <p id="opop"></p>
+
+    <script>
+
+        let attends=[];
+        let ooo='O';
+        let xxx='X';
+        let ttt='△';
+        
+        function clcl(){
+            let chch=document.getElementById('chch');
+            let opop=document.getElementById('opop');
+            //문자로된 데이트를 비교하기 때문에 map(Number) 이용하여 숫자로 변경 필요없음
+            //map(Number) => attends=[1, 12, 14] 새로 생성됨
+            attends=chch.split(','); // attends = [출석 지각 결석]
+            let result=''; //결과값 담는 변수
+
+            for(let i=0; i<=attends.length-1; i++){
+                if(attends[i].trim() ==='출석'){
+                    result += 'O, ';
+                } else if(attends[i].trim() ==='지각'){
+                    result += '△, ';
+                } else {
+                    result += 'X. ';
+                }
+            }
+        }
+        opop.innerHTML=result;
+
+    </script>
+
+
+</body>
+</html>
